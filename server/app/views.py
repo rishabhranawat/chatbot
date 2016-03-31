@@ -5,10 +5,12 @@ import shutil
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    #if request.method == "POST":
-    data = request.get_json(force=True)
-    return data
-
+    if request.method == "POST":
+        print "got inside request post method"
+        print request.get_json()
+        data = request.get_json(force=True)
+        return data
+    return "worked"
 #this will be the interface we use to track a whole bunch of statistics
 #we'll do visualizations around these statistics as well as dynamic text for analsyis and inspection
 @app.route("/dashboard",methods=["GET","POST"])
