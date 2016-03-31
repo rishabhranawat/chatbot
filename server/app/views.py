@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request
+from flask import render_template, request, jsonify
 import shutil
 
 
@@ -7,9 +7,10 @@ import shutil
 def index():
     if request.method == "POST":
         print "got inside request post method"
-        print request.get_json()
-        data = request.get_json(force=True)
-        return data
+        import code
+        code.interact(local=locals())
+        return jsonify(request.get_json(force=True))
+        
     return "worked"
 #this will be the interface we use to track a whole bunch of statistics
 #we'll do visualizations around these statistics as well as dynamic text for analsyis and inspection

@@ -1,6 +1,6 @@
 import requests
-
-print requests.post("http://localhost:5000", data = {"hello":"there"})
+import json
+print requests.post("http://localhost:5000", data = json.dumps({"hello":"there"}))
 
 import code
 code.interact(local=locals())
