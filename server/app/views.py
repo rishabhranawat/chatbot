@@ -5,7 +5,7 @@ from chatbot import simplechat
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    return request.values.to_dict()
+    return simplechat(request.values.to_dict())
         
     
 #this will be the interface we use to track a whole bunch of statistics
