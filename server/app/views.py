@@ -5,8 +5,9 @@ import shutil
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    if request.method == "POST":
-        data = request.get_json(force=True)
+    #if request.method == "POST":
+    data = request.get_json(force=True)
+    return data
 
 #this will be the interface we use to track a whole bunch of statistics
 #we'll do visualizations around these statistics as well as dynamic text for analsyis and inspection
