@@ -11,3 +11,15 @@ class Greeting(db.Model):
     def __str__(self):
         return repr(self.greeting)
 
+class Log(db.Model):
+    __tablename__ = 'log'
+    id = db.Column(db.Integer, primary_key=True)
+    log = db.Column(db.String)
+
+    def __init__(self, log):
+        self.log = log
+
+    def __str__(self):
+        return repr(self.log)
+
+    
