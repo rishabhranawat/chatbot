@@ -1,11 +1,12 @@
+from flask import Flask
 from app import app
 from flask import render_template, request, jsonify
 import shutil
-from chatbot import simplechat
+
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    return simplechat(request.values.to_dict())
+	return "Works"
         
     
 #this will be the interface we use to track a whole bunch of statistics
